@@ -1,0 +1,5 @@
+title: test build
+theme: minima
+permalink: none
+plugins:
+  - jekyll-pocket
