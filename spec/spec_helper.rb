@@ -10,7 +10,11 @@ context Jekyll::Pocket do
   end
   describe 'jekyll build' do
     it 'runs' do
-      expect { `JEKYLL_ENV='pocket' bundle exec jekyll build` }.not_to raise_error
+      expect {
+        quiet_stdout{
+          puts `JEKYLL_ENV='pocket' bundle exec jekyll build`
+        }
+      }.not_to raise_error
     end
     it 'has no broken links' do
       options = { check_html: false, disable_external: true, verbose: true }
