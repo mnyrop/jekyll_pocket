@@ -1,4 +1,7 @@
-# jekyll-pocket [![Build Status](https://travis-ci.org/mnyrop/jekyll_pocket.svg?branch=master)](https://travis-ci.org/mnyrop/jekyll_pocket)
+# jekyll-pocket 
+[![Gem Version](https://badge.fury.io/rb/jekyll-pocket.svg)](https://badge.fury.io/rb/jekyll-pocket) ![License](https://img.shields.io/badge/license-MIT-yellowgreen.svg) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+
+[![Build Status](https://travis-ci.org/mnyrop/jekyll-pocket.svg?branch=master)](https://travis-ci.org/mnyrop/jekyll-pocket) [![](https://img.shields.io/librariesio/github/mnyrop/jekyll-pocket.svg)](https://libraries.io/github/mnyrop/jekyll-pocket)
 
 jekyll hook plugin for building a fully portable site 🎣 💾👝
 
