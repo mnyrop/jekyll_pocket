@@ -1,0 +1,18 @@
+AllCops:
+  TargetRubyVersion: 2.4
+  Exclude:
+    - 'spec/**/*'
+Naming/FileName:
+  Exclude:
+    - 'lib/jekyll-pocket.rb'
+Style/DoubleNegation:
+  Enabled: false
+Style/FrozenStringLiteralComment:
+  Enabled: false
+Layout/EmptyComment:
+  Enabled: false
+Metrics/MethodLength:
+  Max: 12
+Metrics/LineLength:
+  IgnoredPatterns:
+    - 'warn'
