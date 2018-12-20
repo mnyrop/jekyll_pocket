@@ -11,6 +11,8 @@ Gem::Specification.new do |spec|
   spec.summary       = 'jekyll hook plugin for building a fully portable site'
   spec.homepage      = 'https://github.com/mnyrop/jekyll_pocket'
   spec.license       = 'MIT'
+  
+  spec.required_ruby_version = '~> 2.4'
 
   spec.files         = Dir.chdir(File.expand_path(__dir__)) do
     `git ls-files -z`.split("\x0").reject do |f|
