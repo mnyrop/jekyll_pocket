@@ -3,5 +3,5 @@ language: ruby
 cache: bundler
 rvm: 2.5
 script:
-  - bunde exec rubocop
+  - bundle exec rubocop
   - bundle exec rspec
