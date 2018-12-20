@@ -11,18 +11,17 @@ Gem::Specification.new do |spec|
   spec.summary       = 'jekyll hook plugin for building a fully portable site'
   spec.homepage      = 'https://github.com/mnyrop/jekyll_pocket'
   spec.license       = 'MIT'
-  
-  spec.required_ruby_version = '~> 2.4'
 
-  spec.files         = Dir.chdir(File.expand_path(__dir__)) do
+  spec.files = Dir.chdir(File.expand_path(__dir__)) do
     `git ls-files -z`.split("\x0").reject do |f|
       f.match(%r{^(test|spec|features)/})
     end
   end
+  spec.executables = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
 
-  spec.bindir        = 'exe'
-  spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
-  spec.require_paths = ['lib']
+  spec.bindir                 = 'exe'
+  spec.require_paths          = ['lib']
+  spec.required_ruby_version  = '~> 2.4'
 
   spec.add_runtime_dependency 'html-proofer', '>= 3.8', '< 4.0'
   spec.add_runtime_dependency('jekyll', '>= 3.7', '< 4.0')
