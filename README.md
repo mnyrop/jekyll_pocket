@@ -1,4 +1,4 @@
-# jekyll_pocket
+# jekyll-pocket [![Build Status](https://travis-ci.org/mnyrop/jekyll_pocket.svg?branch=master)](https://travis-ci.org/mnyrop/jekyll_pocket)
 
 jekyll hook plugin for building a fully portable site 🎣 💾👝
 
@@ -7,20 +7,33 @@ jekyll hook plugin for building a fully portable site 🎣 💾👝
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'jekyll_pocket'
+gem 'jekyll-pocket'
 ```
 
-And then execute:
+Then execute:
 
-    $ bundle
+```sh
+$ bundle
+```
 
-Or install it yourself as:
+And add it as a jekyll plugin in your `_config.yml` file
 
-    $ gem install jekyll_pocket
+```yaml
+plugins:
+    - jekyll-pocket
+```
 
 ## Usage
 
-TODO: Write usage instructions here
+Make sure all of your files are using file extensions by setting `permalink: none` in your `_config.yml` file and looking through any custom page-level permalinks.
+
+Then run jekyll build in pocket mode with:
+
+```
+$ bundle exec jekyll build JEKYLL_ENV=pocket
+```
+
+When the build is finished, you should be able to double click on your compiled index.html page and open up a fully functioning, serverless site in your browser. The links are all relative so you can move the site onto a thumbdrive and share it offline however you like.
 
 ## License
 
