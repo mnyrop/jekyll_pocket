@@ -1,8 +1,8 @@
-# jekyll-pocket 
+# jekyll_pocket
 
 jekyll hook plugin for building a fully portable site 🎣💾👝
 
-[![Gem Version](https://badge.fury.io/rb/jekyll-pocket.svg)](https://badge.fury.io/rb/jekyll-pocket) ![License](https://img.shields.io/badge/license-MIT-yellowgreen.svg) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com) [![Build Status](https://travis-ci.org/mnyrop/jekyll-pocket.svg?branch=master)](https://travis-ci.org/mnyrop/jekyll-pocket) [![](https://img.shields.io/librariesio/github/mnyrop/jekyll-pocket.svg)](https://libraries.io/github/mnyrop/jekyll-pocket)
+[![Gem Version](https://badge.fury.io/rb/jekyll_pocket.svg)](https://badge.fury.io/rb/jekyll_pocket) ![License](https://img.shields.io/badge/license-MIT-yellowgreen.svg) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com) [![Build Status](https://travis-ci.org/mnyrop/jekyll_pocket.svg?branch=master)](https://travis-ci.org/mnyrop/jekyll_pocket) [![](https://img.shields.io/librariesio/github/mnyrop/jekyll_pocket.svg)](https://libraries.io/github/mnyrop/jekyll_pocket)
 
 
 ## Installation
@@ -10,7 +10,7 @@ jekyll hook plugin for building a fully portable site 🎣💾👝
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'jekyll-pocket'
+gem 'jekyll_pocket'
 ```
 
 Then execute:
@@ -23,7 +23,7 @@ And add it as a jekyll plugin in your `_config.yml` file
 
 ```yaml
 plugins:
-    - jekyll-pocket
+    - jekyll_pocket
 ```
 
 ## Usage

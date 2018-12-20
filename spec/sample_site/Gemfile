@@ -1,2 +1,2 @@
-gem 'jekyll-pocket', path: '../lib'
+gem 'jekyll_pocket', path: '../lib'
 gem 'minima'

@@ -3,9 +3,6 @@ AllCops:
   Exclude:
     - 'vendor/bundle/**/*'
     - 'spec/**/*'
-Naming/FileName:
-  Exclude:
-    - 'lib/jekyll-pocket.rb'
 Style/DoubleNegation:
   Enabled: false
 Style/FrozenStringLiteralComment:
@@ -13,7 +10,15 @@ Style/FrozenStringLiteralComment:
 Layout/EmptyComment:
   Enabled: false
 Metrics/MethodLength:
-  Max: 12
+  Max: 20
+Metrics/AbcSize:
+  Max: 20
 Metrics/LineLength:
   IgnoredPatterns:
     - 'warn'
+    - 'puts'
+    - 'raise'
+Style/RedundantSelf:
+  Enabled: false
+Layout/EmptyLineAfterGuardClause:
+  Enabled: false
