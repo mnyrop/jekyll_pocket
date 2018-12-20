@@ -69,7 +69,7 @@ module Jekyll
       result
     end
 
-    # 
+    #
     #
     def self.unique_root(config = nil)
       default_file = './_config.yml'
