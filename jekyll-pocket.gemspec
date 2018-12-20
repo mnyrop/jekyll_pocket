@@ -24,11 +24,11 @@ Gem::Specification.new do |spec|
 
   spec.add_runtime_dependency('jekyll', '>= 3.7', '< 4.0')
 
-  spec.add_development_dependency 'bundler', '>= 1.16'
+  spec.add_development_dependency 'bundler', '>= 1.16', '< 1.18'
   spec.add_development_dependency 'colorize', '~> 0.8'
-  spec.add_development_dependency 'html-proofer', '~> 3.4'
+  spec.add_development_dependency 'html-proofer', '>= 3.8', '< 4.0'
   spec.add_development_dependency 'minima', '~> 2.5'
-  spec.add_development_dependency 'rspec', '~> 3.0'
-  spec.add_development_dependency 'rubocop', '~> 0.6'
+  spec.add_development_dependency 'rspec', '>= 3.0', '< 4.0'
+  spec.add_development_dependency 'rubocop', '>= 0.60', '< 0.70'
   spec.add_development_dependency 'yard', '~> 0.9'
 end
