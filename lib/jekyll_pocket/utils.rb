@@ -18,23 +18,40 @@ module JekyllPocket
     def self.matches(content, root)
       single_quoted_matches = content.scan(/['].?#{root}[^']*[']/)
       double_quoted_matches = content.scan(/["].?#{root}[^"]*["]/)
-      single_quoted_matches.concat double_quoted_matches
+      parens_matches = content.scan(/[(].?#{root}[^)]*[)]/)
+      [single_quoted_matches, double_quoted_matches, parens_matches].flatten
+    rescue StandardError
+      []
     end
 
     #
     #
-    def self.resolve(result, file)
-      if File.extname(result).empty?
-        if result.empty? || result.end_with?('/')
-          result += 'index.html'
-        else
-          warn 'JekyllPocket::Warning ~> Missing File Extension'.yellow
-          warn "- link '#{result}'\n  in file: '#{file.gsub(`pwd`.strip, '')}'\n"
-          warn "  Auto-resolving as #{result}.html.\n".cyan
-          result += '.html'
-        end
+    def self.clean(content, root)
+      content.gsub(root, '')
+    rescue StandardError
+      content
+    end
+
+    #
+    #
+    def self.result(match, root, prefix)
+      result = match.gsub(root, prefix)
+      result.gsub!(/["'()]/, '')
+      result.gsub!(%r{/+}, '/')
+      result.gsub!(%r{\A/}, '')
+      resolve(result)
+    end
+
+    #
+    #
+    def self.resolve(result)
+      return result unless File.extname(result).empty?
+
+      if result.empty? || result.end_with?('/')
+        "#{result}index.html"
+      else
+        "#{result}.html"
       end
-      result
     end
   end
 end

@@ -4,7 +4,7 @@ require 'jekyll'
 module JekyllPocket
   #
   #
-  class Site
+  class Hook
     def initialize(conf = nil)
       @config = self.config(conf)
       @root   = self.unique_root
@@ -22,18 +22,17 @@ module JekyllPocket
     #
     #
     def rewrite(hook)
-      JekyllPocket::Site.files(hook).each do |file|
+      JekyllPocket::Hook.files(hook).each do |file|
         content = File.read(file)
         prefix  = JekyllPocket::Utils.depth_prefix(hook.dest, file)
 
         JekyllPocket::Utils.matches(content, @root).each do |match|
-          result    = match.gsub(%r{/#{@root}/}, prefix).gsub(/["']/, '')
-          resolved  = JekyllPocket::Utils.resolve(result, file)
-
-          content.gsub!(match, resolved)
+          result = JekyllPocket::Utils.result(match, @root, prefix)
+          content.gsub!(match, result)
         end
 
-        File.write(file, content)
+        cleaned_content = JekyllPocket::Utils.clean(content, @root)
+        File.write(file, cleaned_content)
       end
 
       JekyllPocket::Check.links(hook.dest)
